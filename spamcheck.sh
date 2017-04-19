@@ -1,6 +1,7 @@
 #!/bin/bash
 # Date: Apr 18,2017
-# Author: Tsvetomir Tsvetkov
+# Author: TRBT Ltd
+# https://www.fsolution.biz
 # Check the IP Against Major SPAM Sources.
 # For Debuging uncomment row below 
 #set -x
