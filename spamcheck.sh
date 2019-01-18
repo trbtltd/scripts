@@ -8,11 +8,49 @@
 # pipe delimited exclude list for remote lists
 hosts=""
 Exclude='^dnsbl.mailer.mobi$|^foo.bar$|^bar.baz$'
-WPurl="https://en.wikipedia.org/wiki/Comparison_of_DNS_blacklists"
+#WPurl="https://en.wikipedia.org/wiki/Comparison_of_DNS_blacklists"
 BLIST="$(curl -s $WPurl | egrep "<td>([a-z]+\.){1,7}[a-z]+</td>" | sed -r 's|</?td>||g;/$Exclude/d')"
 # Locally maintained list of DNSBLs to check
 LocalList='
 b.barracudacentral.org
+dnsbl.sorbs.net
+new.spam.dnsbl.sorbs.net
+smtp.dnsbl.sorbs.net
+spam.dnsbl.sorbs.net
+zombie.dnsbl.sorbs.net
+badconf.rhsbl.sorbs.net
+old.spam.dnsbl.sorbs.net
+sbl.spamhaus.org
+xbl.spamhaus.org
+pbl.spamhaus.org
+sbl-xbl.spamhaus.org
+zen.spamhaus.org
+cbl.abuseat.org
+dnsbl.cobion.com
+babl.rbl.webiron.net
+cabl.rbl.webiron.net
+stabl.rbl.webiron.net
+all.rbl.webiron.net
+crawler.rbl.webiron.net
+truncate.gbudb.net
+dnsrbl.org
+db.wpbl.info
+bad.psky.me
+bl.spamcop.net
+noptr.spamrats.com
+dyna.spamrats.com
+spam.spamrats.com
+auth.spamrats.com
+ix.dnsbl.manitu.net
+dnsbl.inps.de
+bl.blocklist.de
+srnblack.surgate.net
+all.s5h.net
+rbl.megarbl.net
+rbl.realtimeblacklist.com
+dnsbl.spfbl.net
+ubl.unsubscore.com
+0spam.fusionzero.com
 '
 
 # Variables
